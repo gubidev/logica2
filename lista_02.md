@@ -41,7 +41,7 @@ console.log("O produto dos valores é:", produto);
 ```
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
-A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.
+A) O código avalia a expressão booleana, imprime `true`, calcula o produto dos números na lista e imprime o resultado no console.✅
 
 B) O código avalia a expressão booleana, imprime `false`, calcula o produto dos números na lista e imprime o resultado no console.
 
@@ -103,7 +103,7 @@ function analisarCredito2() {
 ```
 Se ambas as funções forem executadas com os valores fornecidos, qual será a saída exibida no console?
 
-A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'
+A) Ambas as funções exibirão: 'Seu crédito foi aprovado. Saldo disponível: 400.'✅
 
 B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -600.', enquanto analisarCredito2() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.'
 
@@ -129,7 +129,7 @@ Qual das seguintes alternativas melhor descreve o comportamento do código?
 
 A) O código verifica se a idade indica um adulto ou um idoso e exibe a mensagem correspondente.
 
-B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você é um adulto!". Caso contrário, verifica se é menor de idade e exibe "Você é menor de idade!". Se nenhuma das condições anteriores for verdadeira, exibe "Você está na melhor idade!".
+B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você é um adulto!". Caso contrário, verifica se é menor de idade e exibe "Você é menor de idade!". Se nenhuma das condições anteriores for verdadeira, exibe "Você está na melhor idade!".✅
 
 C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
 
@@ -192,7 +192,7 @@ Dispositivo 3 ligado. Energia restante: 400
 
 Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
-D)
+D)✅
 Dispositivo 1 ligado. Energia restante: 900
 
 Dispositivo 2 ligado. Energia restante: 300
@@ -211,7 +211,7 @@ Escolha a opção que melhor descreve seu propósito:
 
 A) O método update() é responsável por carregar os assets do jogo antes da cena ser exibida.
 
-B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.
+B) O método update() é chamado continuamente a cada quadro (frame) do jogo, sendo usado para atualizar a lógica, movimentação e interações dos objetos na cena.✅
 
 C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
 
@@ -222,7 +222,7 @@ ______
 
 Escolha a opção que responde corretamente:
 
-A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.
+A) Simular física avançada, incluindo corpos rígidos, colisões complexas e interação entre objetos com gravidade e forças.✅
 
 B) Gerenciar eventos de entrada do usuário, como cliques e toques na tela, permitindo movimentação de personagens.
 
@@ -247,20 +247,21 @@ Pedidos de R$200,00 ou mais → "Frete grátis!"
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
 
 ```
-//criando a função para analisar o valor do pedido
+//criando a função para analisar o valor que vai ser pedido
 function analisarPedido (pedido) {
 //se o valor for menor que 50,
 if (pedido < 50) {
 console.log("Frete não disponível!")
-//se o valor for entre 50 e 199.99 (inclusive),
+//se o valor for entre 50 e 199.99, frete com custo adicional,
 } else if (pedido >= 50 && pedido <= 199.99) {
 console.log("Frete com custo adicional!")
-//se o pedido for maior que 199.99,
+//se o pedido for maior que 199.99, frete gratis
 } else {
 console.log ("Frete grátis!")
 }
 }
 analisarPedido(600);
+
 
 ```
 ______
@@ -278,6 +279,50 @@ Método Construtor(modelo, ano):
 Define os valores dos atributos modelo e ano com os valores passados como parâmetro.
 Método CalcularConsumo():
 ```
+
+```
+Classe Veiculo:
+ - Construtor(marca, modelo, ano):
+            - Definir self.marca = marca
+            - Definir self.modelo = modelo
+            - Definir self.ano = ano
+
+ - ExibirDetalhes():
+            - Imprimir "Marca: " + self.marca
+            - Imprimir "Modelo: " + self.modelo
+            - Imprimir "Ano: " + self.ano
+
+Classe Carro herda de Veiculo:
+ - Construtor(marca, modelo, ano, cilindradas, eficiencia):
+        - Chamar o Construtor da classe base (Veiculo)
+        - Definir self.cilindradas = cilindradas
+        - Definir self.eficiencia = eficiencia km por litro
+
+ - CalcularConsumo(quilometragem):
+        - Retornar quilometragem / self.eficiencia
+
+ - ExibirDetalhes():
+        - Chamar ExibirDetalhes() da classe base
+        - Imprimir "Cilindradas: " + self.cilindradas
+        - Imprimir "Eficiência: " + self.eficiencia + " km/l"
+
+Classe Moto herda de Veiculo:
+ - Construtor(marca, modelo, ano, cilindradas, eficiencia):
+        - Chamar o Construtor da classe base (Veiculo)
+        - Definir self.cilindradas = cilindradas
+        - Definir self.eficiencia = eficiencia km por litro
+
+ - CalcularConsumo(quilometragem):
+        - Retornar quilometragem / self.eficiencia
+
+ - ExibirDetalhes():
+        - Chamar ExibirDetalhes() da classe base
+        - Imprimir "Cilindradas: " + self.cilindradas
+        - Imprimir "Eficiência: " + self.eficiencia + " km/l"
+
+
+```
+
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
 ______
@@ -293,6 +338,43 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+```
+
+Classe Foguete:
+    Atributos:
+        - velocidade = 0 
+        - desaceleracao
+        - velocidade0  // Velocidade inicial
+        - tempo
+
+    Métodos:
+        - Construtor(desaceleracao, velocidade0):
+            - Definir self.velocidade = 0
+            - Definir self.desaceleracao = desaceleracao
+            - Definir self.velocidade0 = velocidade0
+
+        - CalcularTempo():
+            - Definir self.tempo = ARREDONDAR_PARA_BAIXO(VALOR_ABSOLUTO((self.velocidade - self.velocidade0) / self.desaceleracao))
+
+            - SE self.tempo > 900 ENTAO:
+                - Imprimir "O tempo foi de " + self.tempo + " segundos. Alerta, possível desvio orbital!."
+            - SENAO:
+                - Imprimir "O tempo foi de " + self.tempo + " segundos. Sem desvio orbital!"
+
+            - SE self.desaceleracao > 4 ENTAO:
+                - Imprimir "A desaceleração foi de " + self.desaceleracao + " m/s². Alerta, pouso instável!."
+            - SENAO:
+                - Imprimir "A desaceleração foi de " + self.desaceleracao + " m/s². Pouso realizado com sucesso!"
+
+Variável foguete1 = Novo Foguete(2.5, 1800)
+Chamar foguete1.CalcularTempo()
+
+Variável foguete2 = Novo Foguete(3, 3000)
+Chamar foguete2.CalcularTempo()
+
+```
+
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
